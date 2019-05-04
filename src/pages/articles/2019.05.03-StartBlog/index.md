@@ -27,6 +27,7 @@ description: ''
 
 ```
 댓글 서비스(disqus) 구현
+방문자 추적 서비스(Google Analytics) 구현
 ```
 
 감사합니다 😀
