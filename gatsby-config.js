@@ -2,11 +2,10 @@ const lost = require('lost')
 const pxtorem = require('postcss-pxtorem')
 
 module.exports = {
-  pathPrefix: '/zero-blog',
   siteMetadata: {
     url: 'https://lumen.netlify.com',
     title: 'Blog by YeoungSu Han (zero)',
-    subtitle: 'Frontend Devloper interested in React & ReactNative 🌈',
+    subtitle: 'Frontend Developer interested in React & ReactNative 🌈',
     copyright: '© All rights reserved.',
     disqusShortname: '',
     menu: [
