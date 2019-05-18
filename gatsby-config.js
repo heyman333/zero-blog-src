@@ -7,7 +7,7 @@ module.exports = {
     title: 'Blog by YeoungSu Han (zero)',
     subtitle: 'Frontend Developer interested in React & ReactNative 🌈',
     copyright: '© All rights reserved.',
-    disqusShortname: '',
+    disqusShortname: 'zero',
     menu: [
       {
         label: 'Articles',
