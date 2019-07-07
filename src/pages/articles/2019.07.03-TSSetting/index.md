@@ -8,7 +8,7 @@ category: 'typescript'
 tags:
   - 'typescript'
   - 'react'
-description: ''
+description: '리액트(React) 프로젝트에 타입스크립트(typescript) 설정'
 ---
 
 React 프로젝트를 시작할때마다 애먹이는 typescript 개발환경 설정  
