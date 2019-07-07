@@ -35,34 +35,33 @@ React 프로젝트를 시작할때마다 애먹이는 typescript 개발환경 �
 
 ```js
 module.exports = {
-module.exports = {
-  extends: ["standard", "prettier"],
-  parser: "@typescript-eslint/parser",
+  extends: ['standard', 'prettier'],
+  parser: '@typescript-eslint/parser',
   env: {
     browser: true,
     jest: true,
   },
   parserOptions: {
     ecmaVersion: 2017,
-    sourceType: "module",
+    sourceType: 'module',
   },
   rules: {
-    "no-unused-vars": 0,
-    "comma-dangle": ["error", "always-multiline"],
-    semi: [2, "always"],
-    "space-before-function-paren": ["error", "never"],
-    "no-new-object": "error",
-    "no-array-constructor": "error",
-    "space-before-function-paren": [
-      "error",
+    'no-unused-vars': 0,
+    'comma-dangle': ['error', 'always-multiline'],
+    semi: [2, 'always'],
+    'space-before-function-paren': ['error', 'never'],
+    'no-new-object': 'error',
+    'no-array-constructor': 'error',
+    'space-before-function-paren': [
+      'error',
       {
-        anonymous: "never",
-        named: "never",
-        asyncArrow: "always",
+        anonymous: 'never',
+        named: 'never',
+        asyncArrow: 'always',
       },
     ],
   },
-};
+}
 ```
 
 관련 설치 모듈:
