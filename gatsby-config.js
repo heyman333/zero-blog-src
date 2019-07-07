@@ -20,7 +20,6 @@ module.exports = {
     ],
     author: {
       name: 'YeoungSu Han (zero)',
-      email: 'amazingmobdev@gmail.com',
       github: 'heyman333',
       linkedin: 'youngsu-han/',
     },
