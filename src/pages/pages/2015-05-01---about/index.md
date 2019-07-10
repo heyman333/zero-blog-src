@@ -29,10 +29,10 @@ Admin 페이지 개발을 위해 `Angular`를 사용하고 있습니다
 
 ### 앞으로 공부하고 싶은 기술 🏃‍
 
-- test(jest / enzyme)
-- TDD
-- node.js
-- aws
+- [ ] test(jest / enzyme)
+- [ ] TDD
+- [ ] node.js
+- [ ] aws
 
 연락하실 일이 있으면 메일로 부탁 드립니다!  
 [amazingmobdev@gmail.com](mailto:amazingmobdev@gmail.com)
