@@ -142,9 +142,9 @@ ESLint 는 자바스크립트 문법 관련된 것들만 관리하게 되고
 찾을 수 없다는 에러인데요
 
 기본적으로 react 모듈에는 타입스크립트를 사용하기 위한 `type 정의 파일`이  
-없기 때문에 다음처럼 별도의 모듈을 설치 해줘야 합니다
+없기 때문에 다음처럼 별도의 모듈들을 설치 해줘야 합니다
 
-`yarn add --dev @types/react`
+`yarn add --dev @types/react @types/react-dom`
 
 설치 이후에 React 관련 라이브러리에서 type 을 찾을 수 없다는  
 에러는 모두 사라질 겁니다!
