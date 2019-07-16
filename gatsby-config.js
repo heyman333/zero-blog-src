@@ -4,7 +4,7 @@ const pxtorem = require('postcss-pxtorem')
 module.exports = {
   siteMetadata: {
     siteUrl: 'https://lumen.netlify.com',
-    title: 'Blog by Yeongsu Han (zero)',
+    title: 'Zero blog',
     subtitle: 'Frontend Developer interested in React & ReactNative 🌈',
     copyright: '© All rights reserved.',
     disqusShortname: 'zero',
@@ -156,8 +156,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Blog by Yeongsu Han (zero)',
-        short_name: 'Blog by Yeongsu Han (zero)',
+        name: 'Zero blog',
+        short_name: 'Zero blog',
         start_url: '/',
         background_color: '#FFF',
         theme_color: '#F7A046',
