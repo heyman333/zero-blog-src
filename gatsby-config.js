@@ -4,7 +4,7 @@ const pxtorem = require('postcss-pxtorem')
 module.exports = {
   siteMetadata: {
     url: 'https://lumen.netlify.com',
-    title: 'Blog by YeoungSu Han (zero)',
+    title: 'Blog by Yeongsu Han (zero)',
     subtitle: 'Frontend Developer interested in React & ReactNative 🌈',
     copyright: '© All rights reserved.',
     disqusShortname: 'zero',
@@ -19,7 +19,7 @@ module.exports = {
       },
     ],
     author: {
-      name: 'YeoungSu Han (zero)',
+      name: 'Yeongsu Han (zero)',
       github: 'heyman333',
       linkedin: 'youngsu-han/',
     },
@@ -151,6 +151,18 @@ module.exports = {
               priority: 0.7,
             }
           }),
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'Blog by Yeongsu Han (zero)',
+        short_name: 'Blog by Yeongsu Han (zero)',
+        start_url: '/',
+        background_color: '#FFF',
+        theme_color: '#F7A046',
+        display: 'standalone',
+        icon: 'static/favicon.png',
       },
     },
     'gatsby-plugin-offline',
