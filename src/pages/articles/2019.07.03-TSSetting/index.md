@@ -17,6 +17,7 @@ React 프로젝트를 시작할때마다 애먹이는 typescript 개발환경 �
 여기서 정리합니다!
 
 ※ code editor 는 `vscode` 를 기본으로 합니다  
+※ `create-react-app`으로 생성된 웹프로젝트를 기준으로 설명합니다  
 ※ typescript 관련 모듈을 전역으로 설치 하지 않고 프로젝트 단위에서 설정합니다
 
 # typescript & eslint 설치
@@ -24,7 +25,7 @@ React 프로젝트를 시작할때마다 애먹이는 typescript 개발환경 �
 `typescript`를 사용하기 위해서는 `컴파일러`가 필요하고  
 작성한 코드를 `lint` 하기 위해서 `eslint`를 설치해줘야 합니다
 
-<i>최신의 `create-react-app`프로젝트에는 `eslint`가 내장되어 있습니다</i>
+<i>최신의 `create-react-app`프로젝트에는 `eslint`가 내장되어 설치가 불필요합니다</i>
 
 - `yarn add --dev typescript`
 - `yarn add --dev eslint`
@@ -93,6 +94,16 @@ TypeScript ESTree 를 사용하여 ESLint 가 TypeScript 소스 코드를 lint �
 prettier 에서 관리 해 줄 수 있는 코드 스타일의 ESLint 규칙을 비활성화 시켜주는 모듈
 ESLint 는 자바스크립트 문법 관련된 것들만 관리하게 되고  
 코드스타일 관련 작업은 prettier 가 담당합니다
+
+`eslint` 설정파일을 어디서부터 만들어야 될지 모르겠다면
+
+```shell
+./node_modules/.bin/eslint --init
+```
+
+를 실행하고 제공되는 가이드에 따라  
+가장 기본이 되는 설정파일을 생성할 수도 있습니다  
+참고: [eslint-getting-started](https://eslint.org/docs/user-guide/getting-started)
 
 # tsconfig.json 파일 설정
 
@@ -173,7 +184,7 @@ ESLint 는 자바스크립트 문법 관련된 것들만 관리하게 되고
 스크립트가 잘 동작하는지 확인하기 위해  
 다음처럼 일부러 type 오류를 만들어서 명령어를 실행해 보겠습니다
 
-`App.tsx` : 정의 되지 않은 인터페이스 사용
+`App.tsx` : <span style="color:red">정의 되지 않은 인터페이스 사용</span>
 
 ```tsx
 import React from 'react'
@@ -209,7 +220,7 @@ typecheck 가 잘 되네요 🎉
 
 <br />
 
-`App.tsx` : 상수에 새로운 값 할당
+`App.tsx` : <span style="color:red">상수에 새로운 값 할당</span>
 
 ```tsx
 import React from 'react'
