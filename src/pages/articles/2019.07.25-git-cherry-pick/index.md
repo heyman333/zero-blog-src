@@ -45,7 +45,8 @@ description: '깃 체리픽(cherry-pick)을 사용하는 방법'
 다시 커밋을 하겠지만 `conflict`등의 여러가지 복잡한 경우가 있다고 가정하고  
 작성의도에 맞게 `cherry-pick`커밋을 활용해 보겠습니다
 
-먼저 이전 브랜치는 남겨둔 채 다음처럼 `feature/add-title-correct` 브랜치를 만들고
+먼저 이전 브랜치는 남겨둔 채 다음처럼  
+`master`브랜치에서 `feature/add-title-correct` 브랜치로 `checkout`하고
 
 <img src="images/reset-master.png" height="650" alt="reset-master" />
 
@@ -54,12 +55,12 @@ description: '깃 체리픽(cherry-pick)을 사용하는 방법'
 현재 브랜치에서 가져올 수 있는 커밋들을 자동완성 된 히스토리를 통해 볼 수 있습니다
 
 ```shell
-git cherry-pick b8ffcad
+git cherry-pick b8ffcad(커밋넘버)
 ```
 
 <img src="images/commit-cherry-pick2.png" alt="commit-cherry-pick2" />
 
-명령어를 실행하고 히스토리를 보니 내가 원하는 커밋이
+명령어를 실행하고 히스토리를 보니 내가 원하는 커밋이  
 새로운 브랜치에서 정상적으로 들어온 것이 보이네요
 
 <img src="images/correct-history.png" alt="correct-history" />
@@ -76,10 +77,13 @@ git checkout feature/add-title
 git reset feature/add-title-correct --hard
 ```
 
+여기서 `--hard` 옵션이 없을 경우 기존 브랜치에서 작업한 내용들이  
+`unstaged`된 채 남아 있습니다
+
 <img src="images/reset-hard.png" alt="reset-hard" />
 
-이렇게 된다면 내가 원하는 커밋은 `feature/add-title-correct`에서 이미 모두
-커밋이 된 상태이므로 내용을 추가한 뒤
+이렇게 된다면 내가 원하는 커밋은 `feature/add-title-correct`에서 이미 모두  
+커밋이 된 상태이므로 원하는 내용을 수정하거나 추가한 뒤  
 같은 브랜치에서 `pull-request`를 보낼 수 있겠네요!
 
 <img src="images/result-history.png" alt="result-history" />
