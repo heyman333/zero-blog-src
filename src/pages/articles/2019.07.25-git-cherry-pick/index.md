@@ -19,7 +19,7 @@ description: '깃 체리픽(cherry-pick)을 사용하는 방법'
 도저히 내 코드를 살릴 수 없는 상황이 되었나요?
 
 `rebase`또는`merge`를 해야하는데 컨플릭트를  
-어디서부터 어떻게 해결해야 할지 감이 안오나요? 😟
+어디서부터 어떻게 해결해야 할지 감이 안 오나요? 😟
 
 <img src="images/git-merge.gif" alt="git-merge-war" width="700" height="auto" />
 
@@ -51,17 +51,19 @@ description: '깃 체리픽(cherry-pick)을 사용하는 방법'
 <img src="images/reset-master.png" height="650" alt="reset-master" />
 
 `git cherry-pick`명령어를 통해 내가 원하는(올바른) 커밋만 가져 오겠습니다  
-내가 원하는 커밋내용은 `git cherry-pick`을 입력한 뒤 `tab`을 눌러  
+커밋내용은 `git cherry-pick`을 터미널에 입력한 뒤 `tab`을 눌러  
 현재 브랜치에서 가져올 수 있는 커밋들을 자동완성 된 히스토리를 통해 볼 수 있습니다
 
-```shell
-git cherry-pick b8ffcad(커밋넘버)
-```
+`(b8ffcad) add #title` 은 올바른 커밋이니 가져가는게 좋겠네요
 
 <img src="images/commit-cherry-pick2.png" alt="commit-cherry-pick2" />
 
+```shell
+git cherry-pick b8ffcad(가져 가고 싶은 커밋넘버)
+```
+
 명령어를 실행하고 히스토리를 보니 내가 원하는 커밋이  
-새로운 브랜치에서 정상적으로 들어온 것이 보이네요
+새로운 브랜치에서 정상적으로 들어온 것이 보입니다
 
 <img src="images/correct-history.png" alt="correct-history" />
 
@@ -78,17 +80,17 @@ git reset feature/add-title-correct --hard
 ```
 
 여기서 `--hard` 옵션이 없을 경우 기존 브랜치에서 작업한 내용들이  
-`unstaged`된 채 남아 있습니다
+`unstaged`된 채 남아 있으니 옵션을 추가 하는 것이 좋습니다
 
 <img src="images/reset-hard.png" alt="reset-hard" />
 
 이렇게 된다면 내가 원하는 커밋은 `feature/add-title-correct`에서 이미 모두  
-커밋이 된 상태이므로 원하는 내용을 수정하거나 추가한 뒤  
+커밋이 된 상태이므로 추가적으로 원하는 내용을 수정하거나 추가한 뒤  
 같은 브랜치에서 `pull-request`를 보낼 수 있겠네요!
 
-<img src="images/result-history.png" alt="result-history" />
+## 최종결과
 
-(히스토리 결과)
+<img src="images/result-history.png" alt="result-history" />
 
 ```shell
 git diff master
@@ -96,4 +98,8 @@ git diff master
 
 <img src="images/result-diff.png" alt="result-diff" />
 
-(diff 결과)
+지금까지 특별한 경우가 아닌 이상 잘 쓰지 않는 기능이지만  
+알아두면 개발자들의 고생을 많이 줄여줄 수 있는  
+`cherry-pick`에 대해서 알아봤습니다
+
+감사합니다 🙃
