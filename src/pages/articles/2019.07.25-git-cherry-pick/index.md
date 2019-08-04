@@ -1,5 +1,5 @@
 ---
-title: '깃 체리픽 사용법'
+title: '깃(git) 체리픽 사용법'
 date: '2019-08-04T20:51:00.000Z'
 layout: post
 path: /post/git-cherry-pick/
@@ -67,7 +67,7 @@ git cherry-pick b8ffcad(커밋넘버)
 
 단순하고 간단한 예시지만 `cherry-pick commit`의 유용성이 느껴지시나요?👍
 
-이후에는 새로 만든 브랜치에서 다시 `pull-requeset`를 보내도 되겠지만  
+이후에는 새로 만든 브랜치에서 다시 `pull-request`를 보내도 되겠지만  
 원격으로(GitHub 등) 이미 보낸 `request`를 `close`하고  
 다시 새로운 요청을 만드는 것은 번거롭고 깔끔하지 못한 방법이므로  
 기존 브랜치로 `checkout` 한 뒤 새로운 브랜치에 `reset` 해보겠습니다
