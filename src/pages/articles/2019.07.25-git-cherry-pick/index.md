@@ -101,7 +101,7 @@ HEAD is now at 3981811 add #title
 커밋이 된 상태이므로 추가적으로 원하는 내용을 수정하거나 추가한 뒤  
 같은 브랜치에서 `pull-request`를 보낼 수 있겠네요!
 
-<i>추가: 소트트리 같은 git gui툴을 사용한다면 다음처럼 커밋에서 우클릭 하고  
+<i>추가: 소스트리 같은 git gui툴을 사용한다면 다음처럼 커밋에서 우클릭 하고  
 `cherry pick`을 클릭해서 실행 할 수도 있습니다</i>
 
 <img src="images/sourcetree-cherry-pick.png" alt="sourcetree" />
