@@ -91,7 +91,7 @@ module.exports = {
 TypeScript ESTree 를 사용하여 ESLint 가 TypeScript 소스 코드를 lint 할 수 있게 하는 모듈
 
 `eslint-config-prettier`:  
-prettier 에서 관리 해 줄 수 있는 코드 스타일의 ESLint 규칙을 비활성화 시켜주는 모듈
+prettier 에서 관리 해 줄 수 있는 코드 스타일의 ESLint 규칙을 비활성화 시켜주는 모듈  
 ESLint 는 자바스크립트 문법 관련된 것들만 관리하게 되고  
 코드스타일 관련 작업은 prettier 가 담당합니다
 
