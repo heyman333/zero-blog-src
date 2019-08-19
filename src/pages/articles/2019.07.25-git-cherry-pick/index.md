@@ -21,17 +21,20 @@ description: '깃 체리픽(cherry-pick)을 사용하는 방법'
 `rebase`또는`merge`를 해야하는데 컨플릭트를  
 어디서부터 어떻게 해결해야 할지 감이 안 오나요? 😟
 
-<img src="images/git-merge.gif" alt="git-merge-war" width="700" height="auto" />
-
-이런 경우에 유용한 `cherry-pick`에 대해서 알아보겠습니다
+<img src="images/git-merge.gif" alt="git-merge-war" width="500" height="auto" />
 
 ## 협업하면서 당면하는 문제들
 
-열심히 `feature`를 만들어서 `pull request`를 보냈지만 시작시점부터 설계를 잘못했거나  
-코드베이스를 잘못 이해해서 리셋을 하거나 아예 새로 시작하는 마음으로  
-`pull request`를 보내야 하는 경우가 있습니다
+열심히 `feature`를 만들어서 `pull-request` 를 보냈지만 시작시점부터 설계를 잘못했거나  
+코드베이스를 잘못 이해해서 리셋을 통해 아예 새로 시작하는 마음으로 `pull-request`를 보내야 하는 경우가 있습니다. (좌절…)
 
-다음의 단편적인 예를 보겠습니다
+<figure>
+  <img src="images/disparate.png" alt="아까운 내 코드들..." />
+  <figcaption>아까운 내 코드들...ㅜㅜ</figcaption>
+</figure>
+
+이런경우 내가 이전에 작성한 코드를 모두 날리지 않고 제대로 작성된 코드(커밋)를 선택적으로 가져올 수 있다면 좌절감이 좀 덜 할 수 있을 것 같은데요…  
+이런 경우에 유용한 `cherry-pick commit` 에 대해서 알아보기 위해 다음처럼 상황을 가정해보겠습니다
 
 <img src="images/git-history.png" height="250" alt="깃 히스토리" />
 
@@ -43,12 +46,12 @@ description: '깃 체리픽(cherry-pick)을 사용하는 방법'
 +
 ```
 
-보통의 경우라면 이 부분을 수정하거나 삭제하고  
-다시 커밋을 하겠지만 `conflict`등의 여러가지 복잡한 경우가 있다고 가정하고  
+보통의 경우라면 이 부분을 수정하거나 삭제하고 다시 커밋을 하겠지만  
+`conflict`등의 여러가지 복잡한 경우가 있다고 가정하고  
 작성의도에 맞게 `cherry-pick`커밋을 활용해 보겠습니다
 
-먼저 이전 브랜치는 남겨둔 채 다음처럼  
-`master`브랜치에서 `feature/add-title-correct` 브랜치로 `checkout`하고
+먼저 이전 브랜치는 남겨둔 채 다음처럼 `master`브랜치에서  
+`feature/add-title-correct` 브랜치를 새로 만든 다음 `checkout`하고
 
 <img src="images/reset-master.png" height="250" alt="reset-master" />
 
@@ -56,7 +59,8 @@ description: '깃 체리픽(cherry-pick)을 사용하는 방법'
 커밋내용은 `git cherry-pick`을 터미널에 입력한 뒤 `tab`을 눌러  
 현재 브랜치에서 가져올 수 있는 커밋들을 자동완성 된 히스토리를 통해 볼 수 있습니다
 
-`(b8ffcad) add #title` 은 올바른 커밋이니 가져가는게 좋겠네요
+`(b8ffcad) add #title` 은 `#체리픽이란` 이라는 텍스트만 추가한 커밋이고  
+올바른 커밋이니 가져가겠습니다
 
 ```shell
 (feature/add-title-correct) % git cherry-pick b8ffcad
@@ -90,7 +94,7 @@ git reset feature/add-title-correct --hard
 ```
 
 여기서 `--hard` 옵션이 없을 경우 기존 브랜치에서 작업한 내용들이  
-`unstaged`된 채 남아 있으니 옵션을 추가 하는 것이 좋습니다
+`unstaged`된 채 남아 있으니 필요한 경우가 아니라면 옵션을 추가 하는 것이 좋습니다
 
 ```shell
 (feature/add-title) % git reset feature/add-title-correct --hard
