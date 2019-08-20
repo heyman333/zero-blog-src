@@ -3,7 +3,7 @@ const pxtorem = require('postcss-pxtorem')
 
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://lumen.netlify.com',
+    siteUrl: 'https://awesomezero.com',
     title: 'Zero blog',
     subtitle: 'Frontend Developer interested in React & ReactNative 🌈',
     copyright: '© All rights reserved.',
@@ -202,6 +202,14 @@ module.exports = {
           }),
         ],
         precision: 8,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://awesomezero.com',
+        sitemap: 'https://awesomezero.com/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }],
       },
     },
   ],
