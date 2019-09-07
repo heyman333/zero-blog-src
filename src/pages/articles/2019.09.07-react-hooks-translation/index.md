@@ -126,7 +126,7 @@ OverReact = {
 }
 ```
 
-Component class의 `OverReaact.render` 함수와 `setState` 함수는 `ExtendedComponent`의 `render` 함수를 실행 할 수 있어야 합니다.
+Component class의 `OverReact.render` 함수와 `setState` 함수는 `ExtendedComponent`의 `render` 함수를 실행 할 수 있어야 합니다.
 
 위의 지식으로 ToDos를 구현해 봅시다.
 
