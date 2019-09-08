@@ -24,7 +24,7 @@ description: 'React-hooks가 함수형 컴포넌트(function component)를 리�
 
 원본은 [medium](https://medium.com/swlh/how-does-react-hooks-re-renders-a-function-component-cc9b531ae7f0)에서 확인 하실 수 있습니다
 
-⚠️ 이 글은 `react-hooks`를 어떻게 활용하가에 대한 글이 아닙니다. 이미 `react-hooks`를 설명하는 많은 훌륭한 자료들이 많습니다. 이 포스트에서는 `react-hooks` 의 매커니즘, 화면 뒤에서 `react-hooks`가 작동하는 방법, `functional component`의 state 를 유지 하는방법, `function component` 를 다시 렌더링 하는 방법에 대한 이해를 설명하려고 합니다. `react` 또는 `react-hooks` 시작하기 위해 자료를 찾고 있다면 공식 문서부터 시작하는 것이 좋습니다. [the official React documentation](https://reactjs.org/docs/getting-started.html).
+⚠️ 이 글은 `react-hooks`를 어떻게 활용하가에 대한 글이 아닙니다. 이미 `react-hooks`를 설명하는 많은 훌륭한 자료들이 많습니다. 이 포스트에서는 `react-hooks` 의 매커니즘, 화면 뒤에서 `react-hooks`가 작동하는 방법, `function component`의 state 를 유지 하는방법, `function component` 를 다시 렌더링 하는 방법에 대한 이해를 설명하려고 합니다. `react` 또는 `react-hooks` 시작하기 위해 자료를 찾고 있다면 공식 문서부터 시작하는 것이 좋습니다. [the official React documentation](https://reactjs.org/docs/getting-started.html).
 
 참고로, 저는 `react-hooks`의 실제 구현에는 익숙하지 않습니다. `react-hooks` 의 실제 구현이 이 글에서 설명한 접근법과 정확하지는 일치 하지 않지만 비슷할 것이라고 생각합니다.
 
