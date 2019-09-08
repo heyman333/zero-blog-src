@@ -264,7 +264,7 @@ instance.plusOne()
 ## closure란 무엇인가?
 
 함수에 선언 된 모든 변수는 해당 함수의 실행 범위 중에만 사용할 수 있습니다. 그러나 함수가 다른 함수를 반환하면
-외부 함수의 실행이 완료된 후에도 [반환함수는 실행이 완료된 경우에도 반환함수 밖에 선언 된 변수에 접근ㄴ 할 수 있습니다](https://medium.com/swlh/how-does-react-hooks-re-renders-a-function-component-cc9b531ae7f0)
+외부 함수의 실행이 완료된 후에도 [반환함수는 실행이 완료된 경우에도 반환함수 밖에 선언 된 변수에 접근 할 수 있습니다](https://medium.com/swlh/how-does-react-hooks-re-renders-a-function-component-cc9b531ae7f0)
 
 ## 왜 closure인가?
 
@@ -593,4 +593,4 @@ context.instance.plusOne()
 
 제가 `react-hooks`의 기능적 매커니즘에 대해 이해 할 수 있도록 질문에 대한 답변, 블로그 게시물, 프리젠테이션을 통해 도움을 준 [Dan](https://twitter.com/dan_abramov/status/1058784045658791936), [Rudi](https://medium.com/@ryardley/react-hooks-not-magic-just-arrays-cd4f1857236e), [Kayis](https://dev.to/kayis/react-hooks-demystified-2af6), [Ryan](https://www.youtube.com/watch?v=1jWS7cCuUXw&t=48), [Swyx](https://www.netlify.com/blog/2019/03/11/deep-dive-how-do-react-hooks-really-work/) 및 [Jonas](https://stackoverflow.com/questions/53895455/how-does-a-mechanism-behind-react-hooks-work#answer-53895655)에게 감사의 말을 전합니다.
 
-마지막으로 내 솔루션을 구축한 [StackOverflow 답변](https://medium.com/swlh/how-does-react-hooks-re-renders-a-function-component-cc9b531ae7f0)에 대해 [jonas Wilms](https://stackoverflow.com/users/5260024/jonas-wilms)에게 무척 감사하고, 이 포스트를 읽고있는 당신에게도 감사합니다. ☕️
+마지막으로 제 솔루션을 구축한 [StackOverflow 답변](https://medium.com/swlh/how-does-react-hooks-re-renders-a-function-component-cc9b531ae7f0)에 대해 [jonas Wilms](https://stackoverflow.com/users/5260024/jonas-wilms)에게 무척 감사하고, 이 글을 읽고있는 여러분에게도 감사합니다. ☕️
