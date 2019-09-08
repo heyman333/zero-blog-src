@@ -264,11 +264,11 @@ instance.plusOne()
 ## closure란 무엇인가?
 
 함수에 선언 된 모든 변수는 해당 함수의 실행 범위 중에만 사용할 수 있습니다. 그러나 함수가 다른 함수를 반환하면
-외부 함수의 실행이 완료된 후에도 [반환함수는 함수의 실행이 완료된 경우에도 반환함수 밖에 선언 된 변수에 액세스 할 수 있습니다](https://medium.com/swlh/how-does-react-hooks-re-renders-a-function-component-cc9b531ae7f0)
+외부 함수의 실행이 완료된 후에도 [반환함수는 실행이 완료된 경우에도 반환함수 밖에 선언 된 변수에 접근ㄴ 할 수 있습니다](https://medium.com/swlh/how-does-react-hooks-re-renders-a-function-component-cc9b531ae7f0)
 
 ## 왜 closure인가?
 
-`closure`는 영구적인 메모리를 사용하지 않고 JavaScript 함수가 상태를 안전하게 유지할 수있는 유일한 방법입니다. `글로벌 변수`에 상태를 유지하는 것은 안전하지 않으며 누구나 `글로벌 변수`에 액세스 할 수 있으므로 결정적이지 않은 결과를 초래할 수 있습니다. 따라서 `closure` 유일한 옵션이 될 수 있습니다.
+`closure`는 영구적인 메모리를 사용하지 않고 JavaScript 함수가 상태를 안전하게 유지할 수있는 유일한 방법입니다. `글로벌 변수`에 상태를 유지하는 것은 안전하지 않으며 누구나 `글로벌 변수`에 액세스 할 수 있으므로 결정적이지 않은 결과를 초래할 수 있습니다. 따라서 `closure`는 유일한 옵션이 될 수 있습니다.
 
 ## Closure 101
 
