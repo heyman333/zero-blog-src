@@ -38,7 +38,7 @@ description: 'React-hooks가 함수형 컴포넌트(function component)를 리�
 
 더 이상 고민하지 말고 시작합시다.
 
-`react-hooks` 는 2018 년 10 월 25 일 React Conf에서 공개적으로 발표되었습니다. 저는 `react-hooks` 사용하여 `function component` 의 state를 유지할 수 있다는 사실에 놀랐습니다. 처음부터 저는 그것에 매료되었지만, 그것은 저에게 마법처럼 보였습니다. 저는 `hook`에 의해 반환 된 함수를 호출하는 것이 어떻게 다시 컴포넌트를 렌더링을 하는지 이해할 수 없었습니다. 그때 코드를 파고 들었지만 아무런 의미가 없었고 내가 생각할 수있는 최선을 다했으며 StackOverflow 질문을 올렸습니다.
+`react-hooks` 는 2018 년 10 월 25 일 React Conf에서 공개적으로 발표되었습니다. 저는 `react-hooks`를 사용하여 `function component` 의 state를 유지할 수 있다는 사실에 놀랐습니다. 처음부터 저는 그것에 매료되었지만, 그것은 저에게 마법처럼 보였습니다. 저는 `hook`에 의해 반환 된 함수를 호출하는 것이 어떻게 다시 컴포넌트를 렌더링을 하는지 이해할 수 없었습니다. 그때 코드를 파고 들었지만 아무런 의미가 없었고 제가 생각할 수 있는 최선을 다했으며 StackOverflow 질문을 올렸습니다.
 
 <a href="https://stackoverflow.com/questions/53024488/how-does-react-usestate-triggers-re-render?source=post_page-----cc9b531ae7f0----------------------">
 <figure>
