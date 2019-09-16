@@ -1,5 +1,5 @@
 ---
-title: 'React Hooks는 어떻게 function component를 re-render 할까?'
+title: 'React Hooks는 어떻게 function component를 다시 그릴까?'
 date: '2019-09-07T20:51:00.000Z'
 layout: post
 path: /post/react-hooks/
@@ -12,7 +12,7 @@ tags:
   - 'functional component'
   - 'translation'
   - 'closure'
-description: 'React-hooks가 함수형 컴포넌트(function component)를 리렌더 하는 방법'
+description: 'React-hooks가 함수형 컴포넌트(function component)를 리렌더(re-render) 하는 방법을 알아봅니다'
 ---
 
 다음 글은 `react-hooks`의 동작원리를 알아보기 위해 원작자 [Sarbbottam Bandyopadhyay](https://medium.com/@sarbbottam) 의 글을 번역한 글입니다
@@ -63,7 +63,7 @@ description: 'React-hooks가 함수형 컴포넌트(function component)를 리�
 </figure>
 </a>
 
-답변이 도움이되었지만 `re-rendering`을 트리거하는 방법을 이해할 수 없었습니다. 그리고 React의 Class Component가 `this.setState`를 호출하면 다시 렌더링을 시작하는 방법을 보고 추론 했습니다.
+답변이 도움이되었지만 `rendering`을 트리거하는 방법을 이해할 수 없었습니다. 그리고 React의 Class Component가 `this.setState` 를 호출하면 다시 렌더링을 시작하는 방법을 보고 추론 했습니다.
 
 📌 다음 예제를 봅시다.
 
@@ -110,7 +110,7 @@ render(ExtendedComponent)
 // extreamly simplified implementation
 function render(Component) {
   // ToDo
-  // render the Component
+  // 컴포넌트를 그린다
 }
 class Component {
   constructor(props) {
@@ -119,7 +119,7 @@ class Component {
   setState(state) {
     this.state = state
     // ToDo
-    // triggers re-render
+    // re-render를 트리거 한다
   }
 }
 OverReact = {
@@ -135,13 +135,13 @@ OverReact = {
 ```js
 // extreamly simplified implementation
 function render(Component) {
-  // create an instance of the passed Component
+  // 전달된 Component의 인스턴스를 생성한다
   const instance = new Component()
-  // invoke the render method of the instance
+  // 인스턴스의 render method를 실행한다
   instance.render()
-  // return the instance back
-  // so that we can invoke the other method of the instance
-  // like so:
+  // 인스턴스의 다른 메소드를 호출하기 위해
+  // 인스턴스를 다시 리턴한다
+  // 다음과 같이:
   // const instance = render(ExtendedComponent);
   // instance.someInstanceMethod();
   return instance
@@ -152,7 +152,7 @@ class Component {
   }
   setState(state) {
     this.state = state
-    // invoke the render method of the instance
+    // 인스턴스의 render method를 실행한다
     this.render()
   }
 }
@@ -188,7 +188,7 @@ OverReact = (function() {
 })()
 ```
 
-위의 작업과 함께 우리는 다음처럼 `this.setState`의 호출이 `re-rendering`을 트리거한다는 것을 알 수 있습니다.
+위의 작업과 함께 우리는 다음처럼 `this.setState`의 호출이 `rendering`을 트리거한다는 것을 알 수 있습니다.
 
 ```js
 OverReact = (function() {
@@ -238,8 +238,8 @@ class ExtendedComponent extends Component {
     console.log(`rendered, counter: ${counter}, name: ${name}`)
   }
 }
-// initial render
-// instance is returned by the OverReact.render method
+// 최초의 render
+// 인스턴스는 OverReact.render method에 의해 반환 됩니다
 const instance = render(ExtendedComponent)
 // rendered, counter: 0, name: foo
 instance.plusOne()
@@ -275,8 +275,8 @@ instance.plusOne()
 ```js
 function greet(salutation) {
   return function(noun) {
-    // salutation is available in this scope
-    // even though greet has finished its execution
+    // 비록 greet이 함수의 실행을 끝냈지만
+    // salutation 변수는 계속 사용가능합니다
     console.log(`${salutation} ${noun}!`)
   }
 }
@@ -306,7 +306,7 @@ hi('Mars') // Hi Mars!
 
 얼마 전에 저는 Ryan의 [React Boston presentation](https://www.youtube.com/watch?v=1jWS7cCuUXw&t=48)을 봤습니다. 발표에서 그는 `renderWithCrappyReactHooks` 함수를 구현해 `react-hooks`의 개념을 설명했지만, `renderWithCrappyReactHook`은 단일 구성 요소에 밀접하게 연결되었습니다. 하지만 저는 더 분리되고 재사용 가능한 구현을 찾고있었습니다.
 
-그리고 최근에 [Deep dive: How do React hooks really work?](https://www.netlify.com/blog/2019/03/11/deep-dive-how-do-react-hooks-really-work/)를 찾았습니다. `react-hook`이 상태를 유지하는 방법을 이해하는 데 큰 도움이되었지만 `hook` 함수 내에서 `render`를 처리하지 않고, render 함수를 명시적으로 호출해줬기 때문에 `hook`이 `re-rendering`이 어떻게 트리거 하는지 설명하지는 않았습니다.
+그리고 최근에 [Deep dive: How do React hooks really work?](https://www.netlify.com/blog/2019/03/11/deep-dive-how-do-react-hooks-really-work/)를 찾았습니다. `react-hook`이 상태를 유지하는 방법을 이해하는 데 큰 도움이되었지만 `hook` 함수 내에서 `render`를 처리하지 않고, render 함수를 명시적으로 호출해줬기 때문에 `hook`이 `rendering`을 어떻게 트리거 하는지 설명하지는 않았습니다.
 
 제 질문은 아직 해결되지 않은 채 남아 있었습니다. 궁금증을 갖고 있었지만 스스로 구현하지 않으려는 수동적인 자세로 해결책을 찾으려고 했고 [Deep dive: How do React hooks really work?](https://www.netlify.com/blog/2019/03/11/deep-dive-how-do-react-hooks-really-work/)는 저 스스로 무언가를 시험해 보라고 동기를 부여했습니다.
 
@@ -379,7 +379,7 @@ OverReact = {
 }
 ```
 
-`OverReact.render` 함수는 Component 함수가 반환 한 객체에서 `render` 메서드를 호출합니다. `setState`는 Component 함수에 접근 할 수 있어야하므로 `OverReact.render 함수`를 전달하여 `re-rendering`을 트리거 할 수 있습니다.
+`OverReact.render` 함수는 Component 함수가 반환 한 객체에서 `render` 메서드를 호출합니다. `setState`는 Component 함수에 접근 할 수 있어야하므로 `OverReact.render 함수`를 전달하여 `rendering`을 트리거 할 수 있습니다.
 
 Component 함수는 `useState` 또는 `setState` 함수로 전달되지 않습니다. 따라서 `setState 함수`에서 Component 함수에 접근 할 수 있도록 Component 함수 를 외부에 저장해야합니다.
 
@@ -508,9 +508,9 @@ OverReact = (function() {
     context.Component = Component
     const instance = Component()
     instance.render()
-    // reset the callId after every render
+    // render가 끝날때마다 callId를 리셋합니다
     callId = -1
-    // ensuring that instance.render is not available out OverReact.render
+    // OverReact.render밖에서 instance.render가 실행되지 않도록 다음을 실행합니다
     delete instance.render
     context.instance = instance
     return context
@@ -565,8 +565,8 @@ function Component() {
     updateName,
   }
 }
-// initial render
-// context is returned by the OverReact.render method
+// 최초의 render
+// context는 OverReact.render method에 의해 반환 됩니다
 const context = render(Component)
 // rendered, counter: 0, name: foo
 context.instance.plusOne()
@@ -581,12 +581,12 @@ context.instance.plusOne()
 // rendered, counter: 3, name: baz
 ```
 
-이제 `react-hooks`가 반환 한 함수를 호출하면 `re-rendering`이 트리거되도록 구현 했습니다  
+이제 `react-hooks`가 반환 한 함수를 호출하면 `rendering`이 트리거되도록 구현 했습니다  
 💻 위의 코드가 작동하는지 확인하려면 [CodePen](https://codepen.io/sarbbottam/pen/WqozMa)을 참조하십시오.
 
 ## 결론
 
-위는 `react-hooks`의 정확한 구현은 아닙니다. 저는 좀 더 이해하기 쉽게 인터페이스를 약간 수정하여`react-hooks` 인터페이스와 비슷하게 구현하려고 했습니다. 만약 당신이 `react-hook`이 어떻게 `re-rendering`을 트리거 하는지 궁금했다면
+위는 `react-hooks`의 정확한 구현은 아닙니다. 저는 좀 더 이해하기 쉽게 인터페이스를 약간 수정하여`react-hooks` 인터페이스와 비슷하게 구현하려고 했습니다. 만약 당신이 `react-hook`이 어떻게 `rendering`을 트리거 하는지 궁금했다면
 이 글이 도움이 되었길 바랍니다. 그리고 자유롭게 여러분의 생각을 적어주세요
 
 위의 구현은 대부분의 `react-hooks` 사례를 처리 할 때 완벽하지는 않으며 `react` 또는 `react-hooks`를 다시 구현하지도 않을 것입니다. react 팀은 이미 훌륭한 일을 해냈습니다. react 팀이 끊임없이 한계를 뛰어 넘어 개발자로 하여금 최신 웹 응용 프로그램을보다 쉽게 구축, 재사용 및 유지 관리 할 수있게 해준 것은 놀라운 일입니다.

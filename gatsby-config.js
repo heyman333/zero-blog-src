@@ -6,7 +6,7 @@ module.exports = {
     siteUrl: 'https://awesomezero.com',
     title: 'Zero blog',
     subtitle: 'Frontend Developer interested in React & ReactNative 🌈',
-    copyright: '© All rights reserved.',
+    copyright: 'Copyright © 2019 by YeongsuHan. All rights reserved.',
     disqusShortname: 'zero',
     menu: [
       {
