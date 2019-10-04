@@ -12,7 +12,7 @@ tags:
   - 'functional component'
   - 'translation'
   - 'closure'
-description: 'React-hooks가 함수형 컴포넌트(function component)를 리렌더(re-render) 하는 방법을 알아봅니다'
+description: 'React-hooks가 함수형 컴포넌트(function component)를 리렌더(re-render) 하는 방법에 대한 번역 글입니다'
 ---
 
 다음 글은 `react-hooks`의 동작원리를 알아보기 위해 원작자 [Sarbbottam Bandyopadhyay](https://medium.com/@sarbbottam) 의 글을 번역한 글입니다

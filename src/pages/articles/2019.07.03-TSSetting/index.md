@@ -10,7 +10,7 @@ tags:
   - 'react'
   - 'eslint'
   - 'ts'
-description: '리액트(React) 프로젝트에 타입스크립트(typescript) 설정'
+description: '리액트(React) 프로젝트에 타입스크립트(typescript) 설정하는 방법을 예제 프로젝트를 통해 알아봅니다'
 ---
 
 React 프로젝트를 시작할때마다 애먹이는 typescript 개발환경 설정 여기서 정리합니다!

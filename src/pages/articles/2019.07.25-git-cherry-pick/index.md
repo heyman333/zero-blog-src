@@ -10,7 +10,7 @@ tags:
   - 'cherry-pick'
   - 'GitHub'
   - 'opensource'
-description: '깃 체리픽(cherry-pick)을 사용하는 방법'
+description: '깃 체리픽(cherry-pick)을 사용하는 방법에 대해서 알아봅니다'
 ---
 
 # Git 체리픽(cherry-pick) 사용법
