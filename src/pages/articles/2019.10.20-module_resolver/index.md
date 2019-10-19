@@ -128,6 +128,10 @@ settings: {
 파일이 자바스크립트라면 위 내용만 설정해도 `lint` 오류 없이 코딩을 시작 할 수 있지만
 만약 타입스크립트를 사용한다면 위 설정 뒤에도 에러메세지가 사라지지 않습니다
 
+<figure>
+  <img src="images/error.png" alt="error"/>
+</figure>
+
 # tsconfig 다시 설정하기
 
 확장자가 `.ts` 또는 `.tsx`인 경우 `vscode`에서는 `tsconfig.json`파일을 기준으로 에러메세지를 보여주기 때문에
