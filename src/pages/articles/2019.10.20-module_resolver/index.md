@@ -71,6 +71,7 @@ module.exports = {
 ```
 
 아래 예시처럼 `alias`를 통해 내가 불러오고 싶은 이름을 커스텀하게 쓸 수도 있습니다
+저는 보통 `assets`폴더는 `src`폴더 밖에 두기 때문에 아래처럼 정의하곤 합니다
 
 ```json
 {
@@ -80,7 +81,10 @@ module.exports = {
       {
         "root": ["./src"],
         "alias": {
-          "underscore": "lodash"
+          "underscore": "lodash",
+          "icons": "./assets/icons",
+          "imgs": "./assets/imgs",
+          "lotties": "./assets/lotties"
         }
       }
     ]
