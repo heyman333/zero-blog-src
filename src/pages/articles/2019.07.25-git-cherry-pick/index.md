@@ -21,7 +21,7 @@ description: '깃 체리픽(cherry-pick)을 사용하는 방법에 대해서 알
 `rebase`또는`merge`를 해야하는데 컨플릭트를  
 어디서부터 어떻게 해결해야 할지 감이 안 오나요? 😟
 
-<img src="images/git-merge.gif" alt="git-merge-war" width="500" height="auto" />
+<img src="images/git-merge.gif" alt="git-merge-war" width="100%" height="auto" />
 
 ## 협업하면서 당면하는 문제들
 

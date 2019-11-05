@@ -46,7 +46,7 @@ import MyUtilFn from '../../../../utils/MyUtilFn'
 <figure>
   <iframe
   src="https://carbon.now.sh/embed/?bg=rgba(0%2C0%2C0%2C1)&t=material&wt=bw&l=application%2Fx-sh&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Fira%20Code&fs=18px&lh=90%25&si=false&es=2x&wm=false&code=yarn%2520add%2520-D%2520babel-plugin-module-resolver%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520"
-  style="width:1024px; height:273px; border:0; overflow:hidden;"
+  style="width:100%; height:273px; border:0; overflow:hidden;"
   sandbox="allow-scripts allow-same-origin">
 </iframe>
 </figure>
@@ -103,7 +103,7 @@ Unable to resolve path to module 'libs/colors'.eslint(import/no-unresolved)
 <figure>
 <iframe
   src="https://carbon.now.sh/embed/?bg=rgba(0%2C0%2C0%2C1)&t=material&wt=bw&l=application%2Fx-sh&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Fira%20Code&fs=18px&lh=90%25&si=false&es=2x&wm=false&code=yarn%2520add%2520-D%2520eslint-plugin-import%250Ayarn%2520add%2520-D%2520eslint-import-resolver-babel-module%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520"
-  style="width:1024px; height:273px; border:0; overflow:hidden;"
+  style="width:100%; height:273px; border:0; overflow:hidden;"
   sandbox="allow-scripts allow-same-origin">
 </iframe>
 </figure>
@@ -166,7 +166,7 @@ babel 설정파일은 `hot loader`를 통해 다시 적용되지 않기 때문�
 <figure>
 <iframe
   src="https://carbon.now.sh/embed/?bg=rgba(0%2C0%2C0%2C1)&t=material&wt=bw&l=application%2Fx-sh&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Fira%20Code&fs=18px&lh=90%25&si=false&es=2x&wm=false&code=yarn%2520start%2520--reset-cache%2520%2520%2520%2520%2520%2520%2520%2520%2520"
-  style="width:1024px; height:273px; border:0; overflow:hidden;"
+  style="width:100%; height:273px; border:0; overflow:hidden;"
   sandbox="allow-scripts allow-same-origin">
 </iframe>
 </figure>
